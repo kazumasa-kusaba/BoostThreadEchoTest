@@ -33,11 +33,11 @@ void echo_client_function(void)
       // receive message
       echo_client_msgq.receive(&message_to_echo_client, sizeof(MESSAGE), recv_size, priority);
 
-      std::cout << "test" << std::endl;
-      
       // handle message
       switch (message_to_echo_client.command) {
         case SEND_MESSAGE:
+          std::cout << "command: " << message_to_echo_client.command << std::endl;
+          std::cout << "message: " << message_to_echo_client.message << std::endl;
           message_to_main.command = EXIT_THREAD;
           message_to_main.message = message_to_echo_client.message;
           std::reverse(message_to_main.message.begin(), message_to_main.message.end());
