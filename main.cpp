@@ -130,7 +130,7 @@ int main(void)
           //       the thread has already finished so null pointer access occured??
           //thread_echo_back_client.join();
           //std::cout << "Thread finished!!" << std::endl;
-          break;
+          goto EXIT;
         default:
           break;
       }
@@ -140,6 +140,7 @@ int main(void)
       exit(1);
   }
 
+EXIT:
   return 0;
 }
 
