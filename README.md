@@ -5,8 +5,8 @@ A test program for Boost Thread Library
 Two contexts communicate with each other by using Boost Thread Library. If "Main" send string to "Thread", "Thread" returns the reversed string.  
 ```mermaid
 sequenceDiagram
-    Main-)Thread: "Hello World"
-    Thread--)Main: "dlroW olleH"
+    Main-)Thread: "Hello"
+    Thread--)Main: "olleH"
 ```
 
 ## How to Use
